@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --mainColor: #2d2e3a;
+  --grayColor: #696c74;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: var(--mainFont);
+  padding: 20px 0;
+}
+
+.card {
+  max-width: 1440px;
+  margin: 0 auto;
+  border: 1px solid #d1d6e9;
+  border-radius: 12px;
+  padding: 32px;
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: 460px auto;
+}
+
+.card__name {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 24px;
+  margin-bottom: 4px;
+}
+
+.card__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+}
+
+.card__school {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--grayColor);
+}
+
+.card__stats {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 24px;
+}
+
+.card__stat {
+  display: grid;
+  grid-auto-flow: row;
+  font-size: 20px;
+  line-height: 120%;
+  gap: 8px 0;
+}
+
+.card__stat div:nth-child(1) {
+  color: var(--grayColor);
+}
+
+.card__stat div:nth-child(2) {
+  color: #2d2e3a;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1000px) {
+  .card {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-gap: 21px 0;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .card__stats {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+  }
+}
